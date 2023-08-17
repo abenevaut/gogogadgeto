@@ -26,8 +26,10 @@ jobs:
         with:
           fetch-depth: 2
 
-      - uses: actions/setup-go@v4
+      - name: Setup GO
+        uses: actions/setup-go@v4
         with:
           go-version: '1.21'
 
-      - run: go run .
+      - name: Say "Hello, World!"
+        run: go run .
